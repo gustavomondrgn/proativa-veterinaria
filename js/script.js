@@ -16,9 +16,26 @@
     // a implementar
   }
 
-  // 2. Marquee — pause on touch (mobile)
+  // 2. Marquee — pause on touch (mobile). Hover é tratado via CSS.
   function setupMarqueeTouch() {
-    // a implementar quando a seção de reviews existir
+    var marquee = document.getElementById('reviews-marquee');
+    if (!marquee) return;
+
+    var resumeTimeout;
+    function pause() {
+      clearTimeout(resumeTimeout);
+      marquee.classList.add('is-paused');
+    }
+    function scheduleResume() {
+      clearTimeout(resumeTimeout);
+      resumeTimeout = setTimeout(function () {
+        marquee.classList.remove('is-paused');
+      }, 1500);
+    }
+
+    marquee.addEventListener('touchstart', pause, { passive: true });
+    marquee.addEventListener('touchend',   scheduleResume, { passive: true });
+    marquee.addEventListener('touchcancel', scheduleResume, { passive: true });
   }
 
   // 3. Smooth scroll para âncoras internas

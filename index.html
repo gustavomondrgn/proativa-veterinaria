@@ -212,7 +212,534 @@
 
     <!-- SEÇÃO 2 — REVIEWS -->
     <section class="reviews" aria-label="Avaliações de tutores no Google">
-      <!-- a implementar -->
+      <div class="container">
+        <header class="reviews__header">
+          <h2 class="reviews__title">O que os tutores falam da Proativa</h2>
+          <p class="reviews__subtitle">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+            4,9 — 66 avaliações no Google
+          </p>
+        </header>
+      </div>
+
+      <!--
+        Marquee infinito.
+        Estratégia: a lista de cards é duplicada e o keyframe move o
+        track em -50%, garantindo loop sem pulinho. Pause on hover via
+        CSS, pause on touch via JS (script.js).
+        TODO: substituir os 12 cards placeholder pelas reviews curadas
+        que o cliente vai enviar.
+      -->
+      <div class="reviews__marquee" id="reviews-marquee" aria-label="Carrossel de avaliações">
+        <ul class="reviews__track" role="list">
+
+          <!-- Bloco original (12 cards) -->
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">A</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 1</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 3 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Quando as reviews curadas chegarem, substituir este texto por uma das avaliações reais (até ~280 caracteres).
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">B</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 2</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 2 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Atendimento de madrugada, equipe atenciosa, levaram meu pet pra cirurgia em poucos minutos.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">C</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 3</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 5 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Estrutura excelente, profissionais sêniores e equipe noturna treinada. Recomendo demais.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">D</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 4</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 1 mês
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Atendimento humano, fizeram exames no mesmo dia e diagnosticaram rápido.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">E</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 5</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 4 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Cheguei desesperada de madrugada e a equipe me acolheu rápido. Salvaram meu pet.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">F</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 6</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 6 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Internação 24h foi essencial pro pós-operatório do meu cachorro. Equipe atenta o tempo todo.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">G</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 7</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 2 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Profissionais excelentes, atendimento atencioso, ambiente limpo e organizado.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">H</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 8</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 7 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Atendimento de emergência muito bom, fui muito bem orientada por telefone antes de chegar.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">I</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 9</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 3 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Cirurgia complicada feita com sucesso, recuperação acompanhada de perto.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">J</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 10</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 4 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Equipe maravilhosa, médicos sempre disponíveis pra esclarecer dúvidas.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">K</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 11</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 1 mês
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Plantão 24h é uma realidade — atendimento mesmo na madrugada de domingo.
+            </p>
+          </li>
+
+          <li class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar" aria-hidden="true">L</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 12</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars" aria-label="5 estrelas">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 8 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">
+              Texto da review aqui — placeholder. Indicação certeira pra qualquer tutor de Sete Lagoas que precise de plantão.
+            </p>
+          </li>
+
+          <!-- Bloco duplicado (12 cards idênticos, aria-hidden, pra loop perfeito) -->
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">A</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 1</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 3 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Quando as reviews curadas chegarem, substituir este texto por uma das avaliações reais (até ~280 caracteres).</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">B</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 2</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 2 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Atendimento de madrugada, equipe atenciosa, levaram meu pet pra cirurgia em poucos minutos.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">C</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 3</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 5 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Estrutura excelente, profissionais sêniores e equipe noturna treinada. Recomendo demais.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">D</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 4</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 1 mês
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Atendimento humano, fizeram exames no mesmo dia e diagnosticaram rápido.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">E</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 5</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 4 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Cheguei desesperada de madrugada e a equipe me acolheu rápido. Salvaram meu pet.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">F</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 6</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 6 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Internação 24h foi essencial pro pós-operatório do meu cachorro. Equipe atenta o tempo todo.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">G</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 7</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 2 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Profissionais excelentes, atendimento atencioso, ambiente limpo e organizado.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">H</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 8</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 7 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Atendimento de emergência muito bom, fui muito bem orientada por telefone antes de chegar.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">I</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 9</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 3 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Cirurgia complicada feita com sucesso, recuperação acompanhada de perto.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">J</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 10</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 4 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Equipe maravilhosa, médicos sempre disponíveis pra esclarecer dúvidas.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">K</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 11</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 1 mês
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Plantão 24h é uma realidade — atendimento mesmo na madrugada de domingo.</p>
+          </li>
+          <li class="review-card" aria-hidden="true">
+            <div class="review-card__head">
+              <div class="review-card__avatar">L</div>
+              <div class="review-card__meta">
+                <span class="review-card__name">Tutor 12</span>
+                <span class="review-card__sub">
+                  <span class="review-card__stars">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#star"/></svg>
+                  </span>
+                  · 8 meses
+                </span>
+              </div>
+            </div>
+            <p class="review-card__text">Texto da review aqui — placeholder. Indicação certeira pra qualquer tutor de Sete Lagoas que precise de plantão.</p>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="container reviews__cta">
+        <!-- TODO: substituir pelo URL exato do Google Business da Proativa -->
+        <a href="https://search.google.com/local/reviews?placeid=PLACEHOLDER"
+           target="_blank" rel="noopener"
+           data-track="ver-todas-reviews">
+          Ver todas as 66 avaliações no Google
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#arrow-right"/></svg>
+        </a>
+      </div>
     </section>
 
     <!-- SEÇÃO 3 — DIFERENCIAIS -->
