@@ -746,6 +746,105 @@ body {
   .reviews__track { animation: none; }
 }
 
+/* DIFERENCIAIS (3 cards) ------------------------------------ */
+.differentials {
+  background: var(--color-bg-soft-green);
+  padding-block: var(--section-padding-y-mobile);
+}
+@media (min-width: 1024px) {
+  .differentials { padding-block: var(--section-padding-y-desktop); }
+}
+
+.differentials__header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  max-width: 720px;
+  margin-inline: auto;
+}
+.differentials__title {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-text-primary);
+}
+@media (min-width: 1024px) {
+  .differentials__title { font-size: var(--fs-4xl); }
+}
+.differentials__subtitle {
+  margin-top: var(--space-3);
+  font-size: var(--fs-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-normal);
+}
+
+.differentials__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+@media (min-width: 768px) {
+  .differentials__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.differential-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 200ms, transform 200ms;
+}
+.differential-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.differential-card__media {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--color-green-100), var(--color-navy-100));
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.differential-card__media span {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  padding: 0 var(--space-4);
+}
+.differential-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.differential-card__body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-grow: 1;
+}
+.differential-card__title {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+  color: var(--color-text-primary);
+}
+@media (min-width: 1024px) {
+  .differential-card__title { font-size: var(--fs-2xl); }
+}
+.differential-card__text {
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--color-text-secondary);
+}
+
 
 /* === 8. LAYOUT — FOOTER ===================================== */
 /* (a popular na etapa do footer) */
