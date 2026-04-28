@@ -92,8 +92,76 @@
 
   <a href="#main" class="skip-link">Pular para o conteúdo</a>
 
-  <header class="site-header">
-    <!-- Header — a implementar -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+
+      <!-- Logo (placeholder textual — TODO: trocar por SVG quando chegar) -->
+      <a href="/" class="site-header__logo" aria-label="Proativa Clínica Veterinária — Página inicial">
+        <span class="site-header__logo-text">
+          <strong>Proativa</strong>
+          <span>Clínica Veterinária</span>
+        </span>
+        <span class="site-header__logo-badge" aria-label="Atendimento 24 horas">24h</span>
+      </a>
+
+      <!-- Blocos de info (desktop) -->
+      <div class="site-header__info">
+
+        <a class="site-header__info-block"
+           href="https://www.google.com/maps/dir/?api=1&destination=Rua+Jos%C3%A9+Gon%C3%A7alves+de+Oliveira%2C+279+-+Canaan%2C+Sete+Lagoas+-+MG"
+           target="_blank" rel="noopener"
+           aria-label="Como chegar — abre rota no Google Maps">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#map-pin"/></svg>
+          <span class="site-header__info-text">
+            <span class="site-header__info-label">Como chegar</span>
+            <span>Rua José Gonçalves de Oliveira, 279</span>
+            <span>Canaan, Sete Lagoas (MG)</span>
+          </span>
+        </a>
+
+        <a class="site-header__info-block"
+           href="https://wa.me/5531998786181?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20veterin%C3%A1rio."
+           target="_blank" rel="noopener"
+           aria-label="Falar conosco no WhatsApp">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#whatsapp"/></svg>
+          <span class="site-header__info-text">
+            <span class="site-header__info-label">Fale conosco</span>
+            <span>(31) 99878-6181</span>
+            <span>(31) 3771-2957</span>
+          </span>
+        </a>
+
+      </div>
+
+      <!-- Redes sociais (desktop) -->
+      <ul class="site-header__social" role="list" aria-label="Redes sociais">
+        <li>
+          <a href="https://www.instagram.com/proativaclinica/" target="_blank" rel="noopener" aria-label="Instagram da Proativa">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#instagram"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/proativaveterinaria/" target="_blank" rel="noopener" aria-label="Facebook da Proativa">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#facebook"/></svg>
+          </a>
+        </li>
+        <li>
+          <!-- TODO: confirmar URL do TikTok com o cliente -->
+          <a href="https://www.tiktok.com/@proativaclinica" target="_blank" rel="noopener" aria-label="TikTok da Proativa">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#tiktok"/></svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botão de telefone (mobile only) -->
+      <a href="tel:+5531998786181"
+         class="site-header__call-mobile"
+         data-track="ligar-header-mobile"
+         aria-label="Ligar para o plantão da Proativa">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons/sprite.svg#phone"/></svg>
+      </a>
+
+    </div>
   </header>
 
   <main id="main">

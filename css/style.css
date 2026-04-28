@@ -222,11 +222,266 @@ body {
 
 
 /* === 5. COMPONENTS ========================================== */
-/* (a popular nas próximas etapas — botões, cards, ícones) */
+
+/* Ícones (sprite SVG via <use>) */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Botões — base compartilhada (CTAs principais) */
+.btn-emergency,
+.btn-whatsapp,
+.btn-brand,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  border: none;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 56px;
+  transition: background 200ms, transform 100ms, box-shadow 200ms;
+  white-space: nowrap;
+}
+.btn-emergency:active,
+.btn-whatsapp:active,
+.btn-brand:active,
+.btn-outline:active { transform: scale(0.98); }
+
+.btn-emergency {
+  background: var(--color-emergency);
+  color: var(--color-white);
+  box-shadow: var(--shadow-emergency);
+}
+.btn-emergency:hover { background: var(--color-emergency-hover); }
+
+.btn-whatsapp {
+  background: var(--color-whatsapp);
+  color: var(--color-white);
+  box-shadow: var(--shadow-whatsapp);
+}
+.btn-whatsapp:hover { background: var(--color-whatsapp-hover); }
+
+.btn-brand {
+  background: var(--color-brand-green);
+  color: var(--color-white);
+  box-shadow: var(--shadow-brand);
+}
+.btn-brand:hover { background: var(--color-brand-green-hover); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-brand-navy);
+  border: 2px solid var(--color-brand-navy);
+}
+.btn-outline:hover { background: var(--color-navy-50); }
+
+.btn-emergency .icon,
+.btn-whatsapp .icon,
+.btn-brand .icon,
+.btn-outline .icon {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+/* Botões pequenos / de UI (cookie banner, links secundários) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  border: none;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--color-gray-100);
+  color: var(--color-text-primary);
+  transition: background 200ms, color 200ms;
+}
+.btn:hover { background: var(--color-gray-200); }
+.btn--brand   { background: var(--color-brand-green); color: var(--color-white); }
+.btn--brand:hover   { background: var(--color-brand-green-hover); }
+.btn--outline { background: transparent; border: 1.5px solid var(--color-brand-navy); color: var(--color-brand-navy); }
+.btn--outline:hover { background: var(--color-navy-50); }
+.btn--ghost   { background: transparent; color: var(--color-text-secondary); }
+.btn--ghost:hover   { background: var(--color-navy-50); color: var(--color-text-primary); }
+.btn--sm      { padding: var(--space-2) var(--space-3); font-size: var(--fs-xs); }
 
 
 /* === 6. LAYOUT — HEADER ===================================== */
-/* (a popular na etapa do header) */
+.site-header {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  margin-right: auto;
+  color: var(--color-text-primary);
+}
+.site-header__logo:hover { color: var(--color-text-primary); }
+
+.site-header__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--lh-tight);
+}
+.site-header__logo-text strong {
+  color: var(--color-brand-green);
+  font-size: var(--fs-lg);
+  letter-spacing: var(--ls-wide);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+}
+.site-header__logo-text span {
+  color: var(--color-text-secondary);
+  font-size: 0.65rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.site-header__logo-badge {
+  background: var(--color-emergency);
+  color: var(--color-white);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  letter-spacing: var(--ls-wide);
+  line-height: 1;
+}
+
+/* Info blocks (endereço + telefones) — só desktop */
+.site-header__info {
+  display: none;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+@media (min-width: 1024px) {
+  .site-header__info { display: flex; }
+}
+.site-header__info-block {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background 200ms;
+}
+.site-header__info-block:hover { background: var(--color-navy-50); }
+.site-header__info-block .icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-brand-green);
+}
+.site-header__info-text {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-tight);
+  gap: 2px;
+}
+.site-header__info-label {
+  font-size: 0.7rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-text-muted);
+}
+
+/* Redes sociais — só desktop */
+.site-header__social {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--space-1);
+}
+@media (min-width: 1024px) {
+  .site-header__social { display: flex; }
+}
+.site-header__social a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  transition: color 200ms, background 200ms;
+}
+.site-header__social a:hover {
+  color: var(--color-brand-green);
+  background: var(--color-navy-50);
+}
+.site-header__social .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Botão de telefone do mobile (oculto no desktop) */
+.site-header__call-mobile {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-emergency);
+  color: var(--color-white);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-emergency);
+  transition: background 200ms, transform 100ms;
+}
+.site-header__call-mobile:hover  { background: var(--color-emergency-hover); }
+.site-header__call-mobile:active { transform: scale(0.95); }
+.site-header__call-mobile .icon {
+  width: 22px;
+  height: 22px;
+}
+@media (min-width: 1024px) {
+  .site-header__call-mobile { display: none; }
+}
+
+/* Variante simples (páginas legais e 404) */
+.site-header--simple .site-header__inner {
+  justify-content: flex-start;
+}
+.site-header--simple .site-header__info,
+.site-header--simple .site-header__social,
+.site-header--simple .site-header__call-mobile { display: none; }
 
 
 /* === 7. LAYOUT — SEÇÕES (index) ============================= */
@@ -246,7 +501,11 @@ body {
 
 
 /* === 11. ANIMAÇÕES ========================================== */
-/* (keyframes — a popular conforme necessário) */
+@keyframes pulse-emergency {
+  0%, 100% { box-shadow: 0 4px 14px rgba(220, 38, 38, 0.40); }
+  50%      { box-shadow: 0 4px 24px rgba(220, 38, 38, 0.70); }
+}
+.btn-emergency--pulse { animation: pulse-emergency 2s ease-in-out infinite; }
 
 
 /* === 12. ACESSIBILIDADE / REDUCED MOTION ==================== */
