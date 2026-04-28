@@ -485,7 +485,118 @@ body {
 
 
 /* === 7. LAYOUT — SEÇÕES (index) ============================= */
-/* (a popular seção a seção) */
+
+/* HERO ------------------------------------------------------- */
+.hero {
+  background: var(--color-bg-soft-green);
+  padding-block: var(--section-padding-y-mobile);
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .hero { padding-block: var(--section-padding-y-desktop); }
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--space-10);
+}
+@media (min-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-16);
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.hero__title {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-text-primary);
+}
+@media (min-width: 1024px) {
+  .hero__title { font-size: var(--fs-5xl); }
+}
+
+.hero__subtitle {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-normal);
+  max-width: 36rem;
+}
+@media (min-width: 1024px) {
+  .hero__subtitle { font-size: var(--fs-xl); }
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+@media (min-width: 480px) {
+  .hero__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hero__actions > * { flex: 1 1 auto; min-width: 220px; }
+}
+@media (min-width: 1024px) {
+  .hero__actions > * { flex: 0 1 auto; }
+}
+
+.hero__microcopy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-medium);
+}
+.hero__microcopy .icon {
+  width: 1.1em;
+  height: 1.1em;
+  color: var(--color-brand-green);
+}
+
+.hero__media {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 3;
+  background: var(--color-navy-100);
+}
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder visual enquanto não há imagem real */
+.hero__media--placeholder {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--color-green-100), var(--color-navy-100));
+}
+.hero__media--placeholder span {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
 
 
 /* === 8. LAYOUT — FOOTER ===================================== */
