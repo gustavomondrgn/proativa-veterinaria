@@ -2135,3 +2135,65 @@ h1, h2, h3 { font-family: var(--font-display); }
   transition: background 150ms;
 }
 .back-link:hover { background: rgba(255,255,255,0.5); }
+
+
+/* === LOGO IMG (header e legais) === */
+.site-header__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .site-header__logo-img { height: 52px; }
+}
+.legal-header__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .legal-header__logo-img { height: 48px; }
+}
+
+/* === SELO 24H === */
+.selo-24h {
+  display: block;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
+/* Variante hero — flutuando no canto superior direito do placeholder */
+.hero__media { position: relative; }
+.selo-24h--hero {
+  position: absolute;
+  top: -20px;
+  right: -12px;
+  width: 110px;
+  height: 110px;
+  z-index: 2;
+  animation: selo-float 6s ease-in-out infinite;
+}
+@media (min-width: 640px) {
+  .selo-24h--hero { width: 140px; height: 140px; top: -28px; right: -18px; }
+}
+@media (min-width: 1024px) {
+  .selo-24h--hero { width: 180px; height: 180px; top: -36px; right: -24px; }
+}
+
+@keyframes selo-float {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50%      { transform: translateY(-8px) rotate(2deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .selo-24h--hero { animation: none; }
+}
+
+/* Variante final-cta — acima do badge "Plantão ativo · agora" */
+.selo-24h--final {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto var(--space-5);
+  filter: drop-shadow(0 12px 24px rgba(102, 149, 40, 0.40));
+}
+@media (min-width: 1024px) {
+  .selo-24h--final { width: 120px; height: 120px; margin-bottom: var(--space-6); }
+}
