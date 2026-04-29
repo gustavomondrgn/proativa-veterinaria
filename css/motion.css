@@ -1,0 +1,289 @@
+/* ==========================================================================
+   MOTION & MICRO-INTERACTIONS — sitewide
+   ==========================================================================
+   Princípios:
+   - Easing suave (cubic-bezier), durações curtas (150-320ms).
+   - Nunca anima o que distrai a leitura. Nunca anima o que retarda conversão.
+   - Tudo respeita prefers-reduced-motion (guard global no style.css).
+   - Hover-only em pointer:fine; ignora touch (mobile).
+   ========================================================================== */
+
+:root {
+  /* Easings */
+  --ease-out-soft:    cubic-bezier(0.22, 1, 0.36, 1);     /* entrada/exit suave */
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);     /* hover/state change */
+  --ease-spring:      cubic-bezier(0.34, 1.56, 0.64, 1);  /* bounce sutil em CTAs */
+
+  /* Durações */
+  --motion-fast: 150ms;
+  --motion-base: 220ms;
+  --motion-slow: 320ms;
+}
+
+/* ==========================================================================
+   1. BUTTONS — hover lift, active tap, ícone subtle motion
+   ========================================================================== */
+
+.btn,
+.header-phone,
+.header-phone--primary,
+.location__phone-row {
+  transition:
+    transform var(--motion-base) var(--ease-out-soft),
+    box-shadow var(--motion-base) var(--ease-out-soft),
+    background-color var(--motion-base) var(--ease-in-out-soft),
+    color var(--motion-base) var(--ease-in-out-soft),
+    border-color var(--motion-base) var(--ease-in-out-soft);
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-emergency:hover,
+  .btn-whatsapp:hover,
+  .btn-brand:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -8px rgba(220, 38, 38, 0.4);
+  }
+  .btn-whatsapp:hover { box-shadow: 0 10px 24px -8px rgba(37, 211, 102, 0.45); }
+  .btn-brand:hover    { box-shadow: 0 10px 24px -8px rgba(102, 149, 40, 0.45); }
+}
+
+/* Active state — feedback tátil instantâneo (igual a clique físico) */
+.btn:active,
+.header-phone:active,
+.location__phone-row:active {
+  transform: translateY(0) scale(0.985);
+  transition-duration: var(--motion-fast);
+}
+
+/* Ícone interno desliza no hover — só em CTAs com seta ou telefone */
+.btn .icon { transition: transform var(--motion-base) var(--ease-out-soft); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .icon { transform: translateX(2px); }
+  /* CTAs de telefone: ícone "balança" sutil ao passar mouse */
+  .btn-emergency:hover .icon,
+  .header-phone--primary:hover .header-phone__icon,
+  .location__phone-row--primary:hover .location__phone-icon {
+    animation: phone-shake 600ms var(--ease-out-soft);
+  }
+}
+@keyframes phone-shake {
+  0%, 100% { transform: rotate(0); }
+  20%      { transform: rotate(-8deg); }
+  40%      { transform: rotate(6deg); }
+  60%      { transform: rotate(-4deg); }
+  80%      { transform: rotate(2deg); }
+}
+
+/* ==========================================================================
+   2. CARDS — lift + shadow + border highlight
+   ========================================================================== */
+
+.card,
+.diff-card,
+.vet-card,
+.urgency__card {
+  transition:
+    transform var(--motion-base) var(--ease-out-soft),
+    box-shadow var(--motion-base) var(--ease-out-soft),
+    border-color var(--motion-base) var(--ease-in-out-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover,
+  .diff-card:hover,
+  .vet-card:hover,
+  .urgency__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-green-200);
+  }
+}
+
+/* Imagens internas: respiram sutil ao hover do card pai */
+.diff-card__media img,
+.vet-card__media img {
+  transition: transform 600ms var(--ease-out-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  .diff-card:hover .diff-card__media img,
+  .vet-card:hover .vet-card__media img {
+    transform: scale(1.03);
+  }
+}
+
+/* ==========================================================================
+   3. REVEAL ON SCROLL — fade + lift in viewport
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity var(--motion-slow) var(--ease-out-soft),
+    transform var(--motion-slow) var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   4. HEADER — sticky shrink no scroll
+   ========================================================================== */
+
+.site-header {
+  transition:
+    padding var(--motion-base) var(--ease-out-soft),
+    box-shadow var(--motion-base) var(--ease-out-soft),
+    background-color var(--motion-base) var(--ease-out-soft);
+}
+.site-header.is-scrolled {
+  box-shadow: 0 2px 16px -4px rgba(44, 47, 72, 0.12);
+}
+.site-header.is-scrolled .site-header__inner {
+  padding-block: 8px;
+}
+.site-header__inner { transition: padding-block var(--motion-base) var(--ease-out-soft); }
+
+/* ==========================================================================
+   5. LINKS — underline grow from left
+   ========================================================================== */
+
+.footer-col a:not(.btn):not(.footer-social a),
+.legal-content a {
+  position: relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: background-size var(--motion-base) var(--ease-out-soft), color var(--motion-base);
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer-col a:not(.btn):hover,
+  .legal-content a:hover {
+    background-size: 100% 1.5px;
+  }
+}
+
+/* Footer social icons — fill anima do bottom no hover */
+.footer-social a {
+  transition:
+    transform var(--motion-base) var(--ease-out-soft),
+    background-color var(--motion-base) var(--ease-out-soft),
+    color var(--motion-base) var(--ease-out-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer-social a:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* ==========================================================================
+   6. URGÊNCIA — ícone alerta com pulsing sutil
+   ========================================================================== */
+
+.urgency__pill {
+  animation: alert-breathe 4s var(--ease-in-out-soft) infinite;
+}
+@keyframes alert-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+
+/* ==========================================================================
+   7. FINAL CTA — botão de ligar com glow pulsante
+   ========================================================================== */
+
+.btn-emergency--pulse {
+  position: relative;
+  animation: emergency-glow 3s var(--ease-in-out-soft) infinite;
+}
+@keyframes emergency-glow {
+  0%, 100% { box-shadow: 0 8px 24px -6px rgba(220, 38, 38, 0.45), 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  50%      { box-shadow: 0 8px 24px -6px rgba(220, 38, 38, 0.55), 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+
+/* ==========================================================================
+   8. HERO — placeholder respira (até ter imagem real)
+   ========================================================================== */
+
+.hero__media .placeholder {
+  animation: hero-float 6s var(--ease-in-out-soft) infinite;
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* ==========================================================================
+   9. REVIEWS — estrelas preenchem ao entrar viewport
+   ========================================================================== */
+
+.review-card .stars svg {
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity var(--motion-base) var(--ease-out-soft),
+    transform var(--motion-base) var(--ease-spring);
+}
+.review-card.is-visible .stars svg { opacity: 1; transform: scale(1); }
+.review-card.is-visible .stars svg:nth-child(1) { transition-delay: 0ms; }
+.review-card.is-visible .stars svg:nth-child(2) { transition-delay: 60ms; }
+.review-card.is-visible .stars svg:nth-child(3) { transition-delay: 120ms; }
+.review-card.is-visible .stars svg:nth-child(4) { transition-delay: 180ms; }
+.review-card.is-visible .stars svg:nth-child(5) { transition-delay: 240ms; }
+
+/* ==========================================================================
+   10. BOTTOM SHEET — backdrop blur na entrada (mobile)
+   ========================================================================== */
+
+.sheet-backdrop {
+  transition: opacity var(--motion-base) var(--ease-out-soft), backdrop-filter var(--motion-base);
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+}
+.sheet-backdrop.is-open {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+/* ==========================================================================
+   11. CHIP / PILL micro-bounce em hover
+   ========================================================================== */
+
+.services__chips li,
+.urgency__pill {
+  transition: transform var(--motion-base) var(--ease-out-soft);
+}
+@media (hover: hover) and (pointer: fine) {
+  .services__chips li:hover { transform: translateY(-2px) scale(1.02); }
+}
+
+/* ==========================================================================
+   12. LIVE TIME — transição quando atualiza
+   ========================================================================== */
+
+#liveTime {
+  display: inline-block;
+  transition: opacity var(--motion-fast) var(--ease-out-soft);
+}
+
+/* ==========================================================================
+   GLOBAL — pausa animações infinitas em prefers-reduced-motion
+   (já tem guard no style.css mas reforçando aqui pra clareza)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .urgency__pill,
+  .btn-emergency--pulse,
+  .hero__media .placeholder {
+    animation: none !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
