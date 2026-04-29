@@ -385,15 +385,15 @@ h1, h2, h3 { font-family: var(--font-display); }
     border-radius: var(--radius-md);
     transition: transform 200ms, box-shadow 200ms, background 200ms;
   }
-  .header-phone__text { display: flex; flex-direction: column; line-height: 1.1; }
+  .header-phone__text { display: flex; flex-direction: column; align-items: center; line-height: 1.15; gap: 2px; }
   .header-phone__label {
-    font-size: var(--fs-xs);
+    font-size: 11px;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
     letter-spacing: var(--ls-wide);
-    display: inline-flex; align-items: center; gap: 6px;
+    display: inline-flex; align-items: center; gap: 5px;
   }
-  .header-phone__number { font-size: var(--fs-base); font-weight: var(--fw-bold); }
+  .header-phone__number { font-size: var(--fs-sm); font-weight: var(--fw-bold); white-space: nowrap; }
 
   .header-phone--primary {
     background: var(--color-emergency); color: var(--color-white);
@@ -2137,63 +2137,53 @@ h1, h2, h3 { font-family: var(--font-display); }
 .back-link:hover { background: rgba(255,255,255,0.5); }
 
 
-/* === LOGO IMG (header e legais) === */
+/* === LOGO IMG (header, legais, footer) === */
 .site-header__logo-img {
-  height: 44px;
+  height: 32px;
   width: auto;
   display: block;
 }
 @media (min-width: 1024px) {
-  .site-header__logo-img { height: 52px; }
+  .site-header__logo-img { height: 36px; }
 }
 .legal-header__logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .legal-header__logo-img { height: 34px; }
+}
+.footer-brand__logo-img {
   height: 40px;
   width: auto;
   display: block;
+  /* Filtro pra logo escuro ficar legível sobre fundo navy do footer.
+     Se a logo já tem cor que contrasta, o filtro não atrapalha. */
+}
+
+/* Badge "24h" textual ao lado do logo (header + legais + footer) */
+.site-header__logo-badge,
+.legal-header__logo-badge,
+.footer-brand__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-emergency);
+  color: var(--color-white);
+  font-size: 11px;
+  font-weight: var(--fw-extrabold);
+  letter-spacing: 0.04em;
+  padding: 3px 7px;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+  flex-shrink: 0;
+  text-transform: lowercase;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.30);
 }
 @media (min-width: 1024px) {
-  .legal-header__logo-img { height: 48px; }
+  .site-header__logo-badge,
+  .legal-header__logo-badge { font-size: 12px; padding: 4px 8px; }
+  .footer-brand__badge { font-size: 13px; padding: 4px 9px; }
 }
 
-/* === SELO 24H === */
-.selo-24h {
-  display: block;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
-}
-
-/* Variante hero — flutuando no canto superior direito do placeholder */
-.hero__media { position: relative; }
-.selo-24h--hero {
-  position: absolute;
-  top: -20px;
-  right: -12px;
-  width: 110px;
-  height: 110px;
-  z-index: 2;
-  animation: selo-float 6s ease-in-out infinite;
-}
-@media (min-width: 640px) {
-  .selo-24h--hero { width: 140px; height: 140px; top: -28px; right: -18px; }
-}
-@media (min-width: 1024px) {
-  .selo-24h--hero { width: 180px; height: 180px; top: -36px; right: -24px; }
-}
-
-@keyframes selo-float {
-  0%, 100% { transform: translateY(0) rotate(-4deg); }
-  50%      { transform: translateY(-8px) rotate(2deg); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .selo-24h--hero { animation: none; }
-}
-
-/* Variante final-cta — acima do badge "Plantão ativo · agora" */
-.selo-24h--final {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto var(--space-5);
-  filter: drop-shadow(0 12px 24px rgba(102, 149, 40, 0.40));
-}
-@media (min-width: 1024px) {
-  .selo-24h--final { width: 120px; height: 120px; margin-bottom: var(--space-6); }
-}

@@ -77,8 +77,12 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="/" class="site-header__logo" aria-label="Proativa Clínica Veterinária — Início">
-      <img src="assets/images/logo-proativa.png" alt="Proativa Clínica Veterinária" class="site-header__logo-img" width="220" height="64">
+    <a href="/" class="site-header__logo" aria-label="Proativa Clínica Veterinária 24h — Início">
+      <picture>
+        <source srcset="assets/images/logo-proativa.webp" type="image/webp">
+        <img src="assets/images/logo-proativa.png" alt="Proativa Clínica Veterinária" class="site-header__logo-img" width="480" height="114">
+      </picture>
+      <span class="site-header__logo-badge" aria-hidden="true">24h</span>
     </a>
 
     <!-- Endereço discreto (apenas desktop) -->
@@ -255,7 +259,6 @@
 
       <div class="hero__media">
         <div class="placeholder">[ FOTO HERO — equipe veterinária<br>em ação na clínica · ~800x600 ]</div>
-        <img src="assets/images/selo-24h.png" alt="Selo 24 horas — Plantão ativo todos os dias" class="selo-24h selo-24h--hero" width="180" height="180" loading="eager">
       </div>
     </div>
   </section>
@@ -600,7 +603,6 @@
   <!-- ============ CTA FINAL ============ -->
   <section class="section final-cta" aria-label="Fale com a Proativa">
     <div class="container">
-      <img src="assets/images/selo-24h.png" alt="" class="selo-24h selo-24h--final" width="120" height="120" loading="lazy" aria-hidden="true">
       <div class="final-cta__badge" aria-live="polite">
         <span class="final-cta__dot" aria-hidden="true"></span>
         Plantão ativo · <span id="liveTime">agora</span> em Sete Lagoas
@@ -673,11 +675,11 @@
       <!-- Coluna 1: Marca + endereço + redes -->
       <div class="footer-col footer-col--brand">
         <div class="footer-brand">
-          <span class="footer-brand__mark" aria-hidden="true">P<span class="footer-brand__24">24h</span></span>
-          <div class="footer-brand__text">
-            <strong>PROATIVA</strong>
-            <small>Clínica Veterinária 24h</small>
-          </div>
+          <picture>
+            <source srcset="assets/images/logo-proativa.webp" type="image/webp">
+            <img src="assets/images/logo-proativa.png" alt="Proativa Clínica Veterinária" class="footer-brand__logo-img" width="480" height="114" loading="lazy">
+          </picture>
+          <span class="footer-brand__badge" aria-hidden="true">24h</span>
         </div>
         <p class="footer-address">
           Rua José Gonçalves de Oliveira, 279<br>
