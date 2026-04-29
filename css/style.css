@@ -221,9 +221,9 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 .btn-whatsapp {
   background: var(--color-whatsapp); color: var(--color-white);
-  box-shadow: var(--shadow-whatsapp);
+  box-shadow: var(--shadow-sm);
 }
-.btn-whatsapp:hover { background: var(--color-whatsapp-hover); }
+.btn-whatsapp:hover { background: var(--color-whatsapp-hover); box-shadow: var(--shadow-md); }
 
 .btn-brand {
   background: var(--color-brand-green); color: var(--color-white);
@@ -2149,6 +2149,46 @@ h1, h2, h3 { font-family: var(--font-display); }
   transition: background 150ms;
 }
 .back-link:hover { background: rgba(255,255,255,0.5); }
+
+
+/* === FLOATING WHATSAPP === */
+.float-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-whatsapp);
+  color: var(--color-white);
+  display: grid;
+  place-items: center;
+  z-index: 90; /* abaixo do banner LGPD (9998) */
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.92);
+  transition: opacity 240ms ease, transform 240ms ease, visibility 0s linear 240ms, background 200ms;
+}
+.float-whatsapp[hidden] { display: none !important; }
+.float-whatsapp.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  transition: opacity 240ms ease, transform 240ms ease, background 200ms;
+}
+.float-whatsapp:hover { background: var(--color-whatsapp-hover); transform: translateY(-2px) scale(1.04); }
+.float-whatsapp:active { transform: translateY(0) scale(0.98); }
+.float-whatsapp svg { width: 28px; height: 28px; }
+@media (min-width: 768px) {
+  .float-whatsapp { bottom: 28px; right: 28px; width: 60px; height: 60px; }
+  .float-whatsapp svg { width: 30px; height: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .float-whatsapp { transition: opacity 0s, visibility 0s; transform: none; }
+  .float-whatsapp.is-visible { transform: none; }
+}
 
 
 /* === LOGO IMG (header, legais, footer) === */

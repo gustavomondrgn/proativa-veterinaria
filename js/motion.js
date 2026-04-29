@@ -77,4 +77,36 @@
     });
     observer.observe(liveTimeEl, { childList: true, characterData: true, subtree: true });
   }
+
+  /* ------------------------------------------------------------------------
+     4. Floating WhatsApp — show/hide inteligente
+        - Esconde enquanto o hero está visível (CTAs já à mão)
+        - Esconde quando o final-cta entra em vista (CTAs gigantes ali)
+        - Aparece em todas as seções intermediárias
+     ------------------------------------------------------------------------ */
+  const floatBtn = document.getElementById('floatWhatsApp');
+  const heroEl = document.querySelector('.hero');
+  const finalCtaEl = document.querySelector('.final-cta');
+
+  if (floatBtn && heroEl && finalCtaEl) {
+    floatBtn.removeAttribute('hidden');
+
+    let heroVisible = true;
+    let finalCtaVisible = false;
+
+    const updateFloat = () => {
+      const shouldShow = !heroVisible && !finalCtaVisible;
+      floatBtn.classList.toggle('is-visible', shouldShow);
+    };
+
+    new IntersectionObserver((entries) => {
+      heroVisible = entries[0].isIntersecting;
+      updateFloat();
+    }, { threshold: 0, rootMargin: '0px 0px -200px 0px' }).observe(heroEl);
+
+    new IntersectionObserver((entries) => {
+      finalCtaVisible = entries[0].isIntersecting;
+      updateFloat();
+    }, { threshold: 0.15 }).observe(finalCtaEl);
+  }
 })();
