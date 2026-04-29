@@ -42,6 +42,10 @@
   --color-whatsapp:        #25D366;
   --color-whatsapp-hover:  #1DA851;
 
+  /* Aliases usados em vários componentes (hover ghost, badge 24h, bg legal) */
+  --color-bg-soft:   var(--color-navy-50);
+  --color-brand-red: var(--color-emergency);
+
   /* === NEUTROS === */
   --color-white:    #FFFFFF;
   --color-gray-50:  #FAFAFA;
@@ -136,6 +140,7 @@
 /* === 2. RESET === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+:target, [id] { scroll-margin-top: 80px; }
 body {
   font-family: var(--font-body);
   font-size: var(--fs-base);
@@ -285,7 +290,9 @@ h1, h2, h3 { font-family: var(--font-display); }
   font-size: var(--fs-lg);
   color: var(--color-brand-navy);
   letter-spacing: var(--ls-tight);
+  transition: opacity 200ms ease;
 }
+.site-header__logo:hover { opacity: 0.85; }
 .site-header__logo-mark {
   width: 36px; height: 36px;
   background: var(--color-brand-green);
@@ -422,6 +429,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 }
 
 /* === BOTTOM SHEET === */
+.sheet[hidden] { display: none !important; }
 .sheet {
   position: fixed; inset: 0;
   z-index: 100;
@@ -466,7 +474,7 @@ h1, h2, h3 { font-family: var(--font-display); }
   margin: 0;
 }
 .sheet__close {
-  width: 36px; height: 36px;
+  width: 44px; height: 44px;
   font-size: 26px;
   line-height: 1;
   color: var(--color-text-muted);
@@ -1670,6 +1678,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 .cookie-btn--primary:hover { background: var(--color-green-700); border-color: var(--color-green-700); }
 
 /* Modal */
+.cookie-modal[hidden] { display: none !important; }
 .cookie-modal {
   position: fixed;
   inset: 0;
@@ -1719,7 +1728,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 .cookie-modal__close {
   background: var(--color-bg-soft);
   border: 0;
-  width: 32px; height: 32px;
+  width: 44px; height: 44px;
   border-radius: var(--radius-full);
   font-size: 22px; line-height: 1;
   color: var(--color-text-secondary);
@@ -1841,7 +1850,9 @@ h1, h2, h3 { font-family: var(--font-display); }
   display: flex; align-items: center; gap: var(--space-3);
   text-decoration: none;
   color: var(--color-text-primary);
+  transition: opacity 200ms ease;
 }
+.legal-header__brand:hover { opacity: 0.85; }
 .legal-header__mark {
   width: 40px; height: 40px;
   border-radius: var(--radius-md);
