@@ -1249,14 +1249,14 @@ h1, h2, h3 { font-family: var(--font-display); }
 .footer-brand__mark {
   width: 56px; height: 56px;
   border-radius: var(--radius-md);
-  background: var(--color-green-100);
+  background: var(--color-navy-100);
   color: var(--color-white);
   display: grid; place-items: center;
   font-weight: var(--fw-extrabold);
   font-size: var(--fs-base);
   position: relative;
   flex-shrink: 0;
-  padding: 4px;
+  padding: 10px;
 }
 .footer-brand__symbol {
   width: 100%;
