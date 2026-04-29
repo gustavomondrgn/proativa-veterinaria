@@ -2154,18 +2154,9 @@ h1, h2, h3 { font-family: var(--font-display); }
 @media (min-width: 1024px) {
   .legal-header__logo-img { height: 34px; }
 }
-.footer-brand__logo-img {
-  height: 40px;
-  width: auto;
-  display: block;
-  /* Filtro pra logo escuro ficar legível sobre fundo navy do footer.
-     Se a logo já tem cor que contrasta, o filtro não atrapalha. */
-}
-
-/* Badge "24h" textual ao lado do logo (header + legais + footer) */
+/* Badge "24h" textual ao lado do logo (header + legais) */
 .site-header__logo-badge,
-.legal-header__logo-badge,
-.footer-brand__badge {
+.legal-header__logo-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2184,6 +2175,5 @@ h1, h2, h3 { font-family: var(--font-display); }
 @media (min-width: 1024px) {
   .site-header__logo-badge,
   .legal-header__logo-badge { font-size: 12px; padding: 4px 8px; }
-  .footer-brand__badge { font-size: 13px; padding: 4px 9px; }
 }
 
