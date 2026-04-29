@@ -2162,26 +2162,21 @@ h1, h2, h3 { font-family: var(--font-display); }
 @media (min-width: 1024px) {
   .legal-header__logo-img { height: 34px; }
 }
-/* Badge "24h" textual ao lado do logo (header + legais) */
+/* Badge "24h" textual ao lado do logo (header + legais) — igual à do footer */
 .site-header__logo-badge,
 .legal-header__logo-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-emergency);
+  background: var(--color-brand-red);
   color: var(--color-white);
-  font-size: 11px;
-  font-weight: var(--fw-extrabold);
-  letter-spacing: 0.04em;
-  padding: 3px 7px;
-  border-radius: var(--radius-sm);
+  font-size: 9px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0;
+  padding: 2px 5px;
+  border-radius: var(--radius-full);
   line-height: 1;
   flex-shrink: 0;
   text-transform: lowercase;
-  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.30);
-}
-@media (min-width: 1024px) {
-  .site-header__logo-badge,
-  .legal-header__logo-badge { font-size: 12px; padding: 4px 8px; }
 }
 
