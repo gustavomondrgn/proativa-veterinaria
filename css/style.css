@@ -141,6 +141,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 :target, [id] { scroll-margin-top: 80px; }
+
+/* Scrollbar minimalista — track invisível, thumb finininho */
+html { scrollbar-width: thin; scrollbar-color: rgba(44, 47, 72, 0.25) transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(44, 47, 72, 0.22);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(44, 47, 72, 0.45); background-clip: padding-box; }
+::-webkit-scrollbar-corner { background: transparent; }
 body {
   font-family: var(--font-body);
   font-size: var(--fs-base);
