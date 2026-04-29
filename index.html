@@ -532,31 +532,34 @@
           title="Mapa da Proativa Clínica Veterinária 24h"></iframe>
       </div>
 
-      <!-- ENDEREÇO (texto destacado, debaixo do mapa) -->
-      <div class="location__address">
-        <svg class="location__address-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div class="location__address-text">
-          <p class="location__address-line">Rua José Gonçalves de Oliveira, 279</p>
-          <p class="location__address-meta">Canaan · Sete Lagoas/MG · CEP 35700-297</p>
-          <p class="location__address-extra">Estacionamento gratuito · Acesso fácil pela Av. Prefeito Alberto Moura</p>
-        </div>
-      </div>
+      <!-- Endereço + CTA lado a lado no desktop, empilhado no mobile -->
+      <div class="location__bottom">
 
-      <!-- CTA principal único + Waze como link inline -->
-      <div class="location__action">
-        <a class="btn btn-brand location__route-btn"
-           href="https://www.google.com/maps/dir/?api=1&destination=Rua+Jos%C3%A9+Gon%C3%A7alves+de+Oliveira%2C+279%2C+Canaan%2C+Sete+Lagoas+MG"
-           target="_blank" rel="noopener"
-           data-track="rota-google-maps">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Abrir rota no Google Maps
-        </a>
-        <a class="location__route-alt"
-           href="https://waze.com/ul?q=Rua%20Jos%C3%A9%20Gon%C3%A7alves%20de%20Oliveira%2C%20279%2C%20Sete%20Lagoas"
-           target="_blank" rel="noopener"
-           data-track="rota-waze">
-          ou abrir no Waze →
-        </a>
+        <div class="location__address">
+          <svg class="location__address-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="location__address-text">
+            <p class="location__address-line">Rua José Gonçalves de Oliveira, 279</p>
+            <p class="location__address-meta">Canaan · Sete Lagoas/MG · CEP 35700-297</p>
+            <p class="location__address-extra">Estacionamento gratuito · Acesso fácil pela Av. Prefeito Alberto Moura</p>
+          </div>
+        </div>
+
+        <div class="location__action">
+          <a class="btn btn-brand location__route-btn"
+             href="https://www.google.com/maps/dir/?api=1&destination=Rua+Jos%C3%A9+Gon%C3%A7alves+de+Oliveira%2C+279%2C+Canaan%2C+Sete+Lagoas+MG"
+             target="_blank" rel="noopener"
+             data-track="rota-google-maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Abrir rota no Google Maps
+          </a>
+          <a class="location__route-alt"
+             href="https://waze.com/ul?q=Rua%20Jos%C3%A9%20Gon%C3%A7alves%20de%20Oliveira%2C%20279%2C%20Sete%20Lagoas"
+             target="_blank" rel="noopener"
+             data-track="rota-waze">
+            ou abrir no Waze →
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
