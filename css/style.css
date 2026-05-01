@@ -671,7 +671,7 @@ h1, h2, h3 { font-family: var(--font-display); }
   .hero { padding-block: var(--space-16) var(--space-20); }
   .hero__inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: var(--space-12); }
   .hero h1 { font-size: var(--fs-5xl); }
-  .hero__ctas { grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+  .hero__ctas { grid-template-columns: auto auto; justify-content: start; gap: var(--space-4); }
   .hero__media .placeholder { aspect-ratio: 4/3; min-height: 420px; }
 }
 
@@ -825,9 +825,7 @@ h1, h2, h3 { font-family: var(--font-display); }
   border-radius: var(--radius-xl);
   overflow: hidden;
   display: flex; flex-direction: column;
-  transition: transform 200ms, box-shadow 200ms;
 }
-.diff-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .diff-card__media .placeholder {
   aspect-ratio: 16 / 10; border-radius: 0; border: none;
   border-bottom: 1px solid var(--color-green-200);
@@ -927,7 +925,6 @@ h1, h2, h3 { font-family: var(--font-display); }
 @media (min-width: 1024px) {
   .urgency__grid { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-12); align-items: start; }
   .urgency__title { font-size: var(--fs-5xl); }
-  .urgency__ctas { grid-template-columns: 1fr 1fr; }
 }
 
 /* === 14. CORPO CLÍNICO === */

@@ -27,8 +27,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css?v=7">
-<link rel="stylesheet" href="css/motion.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/motion.css?v=2">
 
 <!-- Schema.org — VeterinaryCare + LocalBusiness -->
 <script type="application/ld+json">
@@ -299,7 +299,7 @@
       <div class="differentials__grid">
         <article class="diff-card">
           <div class="diff-card__media">
-            <img src="assets/images/estrutura-clinica.jpg?v=1" alt="Estrutura completa da Proativa — consulta e diagnóstico" width="1280" height="800" loading="lazy" decoding="async">
+            <img src="assets/images/estrutura-clinica.jpg?v=2" alt="Estrutura completa da Proativa — consulta e diagnóstico" width="1280" height="800" loading="lazy" decoding="async">
           </div>
           <div class="diff-card__body">
             <div class="diff-card__icon" aria-hidden="true">
@@ -328,7 +328,7 @@
 
         <article class="diff-card">
           <div class="diff-card__media">
-            <img src="assets/images/estrutura-24h.jpg?v=1" alt="Plantão 24h — pronto atendimento veterinário" width="1280" height="800" loading="lazy" decoding="async">
+            <img src="assets/images/estrutura-24h.jpg?v=3" alt="Plantão 24h — pronto atendimento veterinário" width="1280" height="800" loading="lazy" decoding="async">
           </div>
           <div class="diff-card__body">
             <div class="diff-card__icon" aria-hidden="true">
@@ -986,8 +986,6 @@ document.getElementById('footerYear').textContent = new Date().getFullYear();
     const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
     const offset = -(index * (slideW + gap));
     track.style.transform = `translateX(${offset}px)`;
-    if (prevBtn) prevBtn.disabled = index <= 0;
-    if (nextBtn) nextBtn.disabled = index >= maxIndex();
     Array.from(dotsWrap.children).forEach((d, i) => {
       d.setAttribute('aria-selected', i === index ? 'true' : 'false');
       d.tabIndex = i === index ? 0 : -1;
@@ -995,7 +993,8 @@ document.getElementById('footerYear').textContent = new Date().getFullYear();
   }
 
   function goTo(i) {
-    index = Math.max(0, Math.min(i, maxIndex()));
+    const range = maxIndex() + 1;
+    index = ((i % range) + range) % range;
     update();
   }
 

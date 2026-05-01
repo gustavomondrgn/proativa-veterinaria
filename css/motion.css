@@ -84,7 +84,6 @@
    ========================================================================== */
 
 .card,
-.diff-card,
 .vet-card,
 .urgency__card {
   transition:
@@ -94,7 +93,6 @@
 }
 @media (hover: hover) and (pointer: fine) {
   .card:hover,
-  .diff-card:hover,
   .vet-card:hover,
   .urgency__card:hover {
     transform: translateY(-4px);
@@ -104,12 +102,10 @@
 }
 
 /* Imagens internas: respiram sutil ao hover do card pai */
-.diff-card__media img,
 .vet-card__media img {
   transition: transform 600ms var(--ease-out-soft);
 }
 @media (hover: hover) and (pointer: fine) {
-  .diff-card:hover .diff-card__media img,
   .vet-card:hover .vet-card__media img {
     transform: scale(1.03);
   }
