@@ -5,7 +5,9 @@
 (() => {
   'use strict';
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const PAPER_MODE = new URLSearchParams(location.search).has('paper');
+  if (PAPER_MODE) document.documentElement.classList.add('paper-mode');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || PAPER_MODE;
 
   /* ------------------------------------------------------------------------
      1. Reveal on scroll — fade + lift quando entra viewport

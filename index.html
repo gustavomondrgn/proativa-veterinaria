@@ -27,8 +27,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css?v=8">
-<link rel="stylesheet" href="css/motion.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/motion.css?v=3">
 
 <!-- Schema.org — VeterinaryCare + LocalBusiness -->
 <script type="application/ld+json">
@@ -867,6 +867,10 @@
 </div>
 
 <script>
+// === Modo Paper (snapshot pra apresentacao) ===
+const PAPER_MODE = new URLSearchParams(location.search).has('paper');
+if (PAPER_MODE) document.documentElement.classList.add('paper-mode');
+
 // === Reviews + horário ao vivo ===
 const REVIEWS = [
   { name: "Mariana S.", initial: "M", time: "há 2 semanas", text: "Cheguei desesperada de madrugada com minha gata convulsionando. Em 3 minutos a equipe já estava com ela na sala de emergência. Atendimento humano e técnico ao mesmo tempo. Salvaram a vida da Mel." },
@@ -916,6 +920,7 @@ track.innerHTML = REVIEWS.map(renderCard).join('') + REVIEWS.map(renderCard).joi
 function updateLiveTime() {
   const el = document.getElementById('liveTime');
   if (!el) return;
+  if (PAPER_MODE) { el.textContent = '17:30'; return; }
   const now = new Date();
   const fmt = new Intl.DateTimeFormat('pt-BR', {
     hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'
@@ -923,7 +928,7 @@ function updateLiveTime() {
   el.textContent = fmt.format(now);
 }
 updateLiveTime();
-setInterval(updateLiveTime, 30000);
+if (!PAPER_MODE) setInterval(updateLiveTime, 30000);
 
 // Ano dinâmico no footer
 document.getElementById('footerYear').textContent = new Date().getFullYear();
@@ -1057,8 +1062,8 @@ document.getElementById('footerYear').textContent = new Date().getFullYear();
   update();
 })();
 </script>
-<script src="js/consent.js" defer></script>
-<script src="js/motion.js" defer></script>
+<script src="js/consent.js?v=2" defer></script>
+<script src="js/motion.js?v=2" defer></script>
 
 </body>
 </html>

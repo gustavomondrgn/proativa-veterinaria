@@ -135,8 +135,11 @@
 
   /* ---------- Wire up ---------- */
   function init() {
+    const PAPER_MODE = new URLSearchParams(location.search).has('paper');
+    if (PAPER_MODE) document.documentElement.classList.add('paper-mode');
+
     const existing = loadExistingConsent();
-    if (!existing) {
+    if (!existing && !PAPER_MODE) {
       // 1s de delay pra não assustar
       setTimeout(showBanner, 1000);
     }

@@ -2325,3 +2325,32 @@ h1, h2, h3 { font-family: var(--font-display); }
   text-transform: lowercase;
 }
 
+/* ==========================================================================
+   PAPER MODE — snapshot pra apresentacao do design ao cliente
+   Ativa via ?paper=1 na URL (em qualquer pagina: index, termos, privacidade, 404).
+   Esconde elementos JS-dependent e pausa animacoes pra snapshot ficar limpo.
+   ========================================================================== */
+
+html.paper-mode .cookie-banner,
+html.paper-mode #cookie-modal,
+html.paper-mode .float-whatsapp {
+  display: none !important;
+}
+
+html.paper-mode .urgency__pill,
+html.paper-mode .btn-emergency--pulse,
+html.paper-mode .hero__media .placeholder,
+html.paper-mode .marquee__track,
+html.paper-mode .review-card .stars svg {
+  animation: none !important;
+}
+
+html.paper-mode .marquee__track {
+  transform: translateX(0) !important;
+}
+
+html.paper-mode .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
