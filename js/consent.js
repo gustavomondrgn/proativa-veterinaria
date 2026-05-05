@@ -135,7 +135,8 @@
 
   /* ---------- Wire up ---------- */
   function init() {
-    const PAPER_MODE = new URLSearchParams(location.search).has('paper');
+    const PAPER_MODE = new URLSearchParams(location.search).has('paper')
+      || document.documentElement.classList.contains('paper-mode');
     if (PAPER_MODE) document.documentElement.classList.add('paper-mode');
 
     const existing = loadExistingConsent();

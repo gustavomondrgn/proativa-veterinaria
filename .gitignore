@@ -18,3 +18,11 @@ docs/
 
 # Dependências (caso futuramente)
 node_modules/
+
+# Paper.design build artifacts (gerado por build_paper.py)
+paper-build/
+
+# Ferramentas internas (não vão pro repo do cliente)
+.mcp.json
+build_paper.py
+capture_paper.py

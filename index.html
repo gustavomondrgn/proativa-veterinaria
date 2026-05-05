@@ -7,8 +7,8 @@
 <meta name="description" content="Plantão veterinário ativo 24h em Sete Lagoas. Pronto atendimento, 27 leitos de internação, exames e cirurgia. Ligue agora.">
 <meta name="theme-color" content="#669528">
 <link rel="canonical" href="https://proativaveterinaria.com.br/">
-<link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico?v=1">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -868,7 +868,8 @@
 
 <script>
 // === Modo Paper (snapshot pra apresentacao) ===
-const PAPER_MODE = new URLSearchParams(location.search).has('paper');
+const PAPER_MODE = new URLSearchParams(location.search).has('paper')
+  || document.documentElement.classList.contains('paper-mode');
 if (PAPER_MODE) document.documentElement.classList.add('paper-mode');
 
 // === Reviews + horário ao vivo ===
