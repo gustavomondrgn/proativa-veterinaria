@@ -639,16 +639,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
   background: var(--color-emergency);
   border: 1px solid var(--color-emergency);
   color: var(--color-white);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-full);
-  font-size: var(--fs-xs);
+  font-size: 0.625rem;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: var(--ls-wide);
   width: fit-content;
 }
 .hero__eyebrow::before {
-  content: ""; width: 8px; height: 8px;
+  content: ""; width: 6px; height: 6px;
   background: var(--color-white);
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
@@ -659,7 +659,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
   100% { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
 }
 .hero h1 {
-  font-size: var(--fs-4xl);
+  font-size: calc(var(--fs-4xl) - 0.875rem);
   font-weight: var(--fw-bold);
   line-height: var(--lh-tight);
   letter-spacing: var(--ls-tight);
@@ -669,6 +669,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
 }
 .hero__subtitle {
   font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
   color: var(--color-text-secondary);
   margin-top: var(--space-4);
   line-height: var(--lh-normal);
@@ -680,12 +681,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
 }
 .hero__microcopy {
   margin-top: var(--space-4);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   color: var(--color-text-secondary);
   display: flex; align-items: center; gap: var(--space-2);
 }
 .hero__microcopy .check {
-  width: 20px; height: 20px;
+  width: 16px; height: 16px;
   background: var(--color-brand-green);
   border-radius: 50%;
   display: grid; place-items: center;
@@ -727,7 +728,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
 @media (min-width: 1024px) {
   .hero { padding-block: var(--space-16) var(--space-20); }
   .hero__inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: var(--space-12); }
-  .hero h1 { font-size: var(--fs-5xl); }
+  .hero h1 { font-size: calc(var(--fs-5xl) - 0.875rem); }
   .hero__ctas { grid-template-columns: auto auto; justify-content: start; gap: var(--space-4); }
   .hero__media .placeholder { aspect-ratio: 4/3; min-height: 420px; }
 }
@@ -874,6 +875,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
 
 /* === 12. DIFERENCIAIS === */
 .differentials { background: var(--color-green-100); }
+.differentials .section__head { max-width: none; gap: var(--space-5); margin-bottom: var(--space-10); }
+.differentials .section__title { text-wrap: nowrap; }
+@media (max-width: 768px) {
+  .differentials .section__title { text-wrap: balance; }
+}
 .differentials__grid {
   display: grid; gap: var(--space-5);
 }
@@ -1497,9 +1503,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
   background: var(--color-white);
   border: 1px solid var(--color-border);
   color: var(--color-text-secondary);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-full);
-  font-size: var(--fs-xs);
+  font-size: 0.625rem;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: var(--ls-wide);
@@ -1514,16 +1520,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); color: var(--color-te
   background: var(--color-white);
   border: 1px solid var(--color-green-200);
   color: var(--color-brand-green);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-full);
-  font-size: var(--fs-xs);
+  font-size: 0.625rem;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: var(--ls-wide);
   width: fit-content;
 }
 .hero__chip-merged::before {
-  content: ""; width: 8px; height: 8px;
+  content: ""; width: 6px; height: 6px;
   background: var(--color-brand-green);
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(102,149,40,0.6);
