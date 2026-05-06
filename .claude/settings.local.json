@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch *)",
+      "Bash(python *)",
+      "Bash(curl -sS \"http://127.0.0.1:8765/css/style.css?v=10\")",
+      "Bash(Select-String -Pattern \"color-green-600|color-navy-800|font-display|font-body|color-text-primary|color-text-heading|color-emergency:\")",
+      "Bash(Select-Object -First 12)",
+      "PowerShell(\\(Invoke-WebRequest \"http://127.0.0.1:8765/css/style.css?v=10\" -UseBasicParsing\\).Content -split \"`n\" | Select-String -Pattern \"color-green-600|color-navy-800|font-display|font-body|color-text-primary|color-text-heading|color-emergency:|color-warning:\" | Select-Object -First 14)",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?reload=1\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html#footer\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=13\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=14\")",
+      "Bash(node -e \"console.log\\('node', process.version\\)\")",
+      "Bash(pip install *)",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=15\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=15#reviews\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=16#main\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=17#main\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html#main\")",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\josen\\\\Downloads\\\\clinica veterinaria\\\\\" -ErrorAction SilentlyContinue | Format-Table Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}}, LastWriteTime -AutoSize | Out-String)",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=18#localizacao\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=19#main\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=20#main\")",
+      "PowerShell(Start-Process \"http://127.0.0.1:8765/index.html?v=21#main\")"
+    ]
+  }
+}

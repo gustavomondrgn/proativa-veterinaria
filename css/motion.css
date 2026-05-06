@@ -46,10 +46,10 @@
   .btn-whatsapp:hover,
   .btn-brand:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px -8px rgba(220, 38, 38, 0.4);
+    box-shadow: 0 10px 24px -8px rgba(198, 40, 40, 0.4);
   }
   .btn-whatsapp:hover { box-shadow: 0 10px 24px -8px rgba(37, 211, 102, 0.45); }
-  .btn-brand:hover    { box-shadow: 0 10px 24px -8px rgba(102, 149, 40, 0.45); }
+  .btn-brand:hover    { box-shadow: 0 10px 24px -8px rgba(95, 163, 59, 0.45); }
 }
 
 /* Active state — feedback tátil instantâneo (igual a clique físico) */
@@ -139,7 +139,7 @@
     background-color var(--motion-base) var(--ease-out-soft);
 }
 .site-header.is-scrolled {
-  box-shadow: 0 2px 16px -4px rgba(44, 47, 72, 0.12);
+  box-shadow: 0 2px 16px -4px rgba(30, 42, 120, 0.12);
 }
 .site-header.is-scrolled .site-header__inner {
   padding-block: 8px;
@@ -201,8 +201,8 @@
   animation: emergency-glow 3s var(--ease-in-out-soft) infinite;
 }
 @keyframes emergency-glow {
-  0%, 100% { box-shadow: 0 8px 24px -6px rgba(220, 38, 38, 0.45), 0 0 0 0 rgba(220, 38, 38, 0.4); }
-  50%      { box-shadow: 0 8px 24px -6px rgba(220, 38, 38, 0.55), 0 0 0 8px rgba(220, 38, 38, 0); }
+  0%, 100% { box-shadow: 0 8px 24px -6px rgba(198, 40, 40, 0.45), 0 0 0 0 rgba(198, 40, 40, 0.4); }
+  50%      { box-shadow: 0 8px 24px -6px rgba(198, 40, 40, 0.55), 0 0 0 8px rgba(198, 40, 40, 0); }
 }
 
 /* ==========================================================================

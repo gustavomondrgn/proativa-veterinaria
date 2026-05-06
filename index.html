@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proativa Clínica Veterinária 24h — Sete Lagoas/MG</title>
 <meta name="description" content="Plantão veterinário ativo 24h em Sete Lagoas. Pronto atendimento, 27 leitos de internação, exames e cirurgia. Ligue agora.">
-<meta name="theme-color" content="#669528">
+<meta name="theme-color" content="#5FA33B">
 <link rel="canonical" href="https://proativaveterinaria.com.br/">
 <link rel="icon" href="/favicon.ico?v=1">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
@@ -26,9 +26,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css?v=9">
-<link rel="stylesheet" href="css/motion.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css?v=21">
+<link rel="stylesheet" href="css/motion.css?v=4">
 
 <!-- Schema.org — VeterinaryCare + LocalBusiness -->
 <script type="application/ld+json">
@@ -82,33 +82,44 @@
         <source srcset="assets/images/logo-proativa.webp" type="image/webp">
         <img src="assets/images/logo-proativa.png" alt="Proativa Clínica Veterinária" class="site-header__logo-img" width="480" height="114">
       </picture>
-      <span class="site-header__logo-badge" aria-hidden="true">24h</span>
+      <img src="assets/images/badge-24h.webp?v=2" alt="" class="site-header__logo-badge" width="44" height="44" aria-hidden="true">
     </a>
 
-    <!-- Endereço discreto (apenas desktop) -->
-    <a class="header-address" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Jos%C3%A9+Gon%C3%A7alves+de+Oliveira%2C+279%2C+Canaan%2C+Sete+Lagoas+MG" target="_blank" rel="noopener" aria-label="Como chegar à clínica">
+    <!-- Endereço + botões "como chegar" (apenas desktop) -->
+    <div class="header-address">
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span>
+      <span class="header-address__text">
         <span class="header-address__street">Rua José Gonçalves, 279</span>
         <span class="header-address__city">Canaan, Sete Lagoas (MG)</span>
       </span>
-    </a>
+      <span class="header-address__routes">
+        <a class="header-route header-route--waze" href="https://waze.com/ul?ll=-19.4659,-44.2476&navigate=yes" target="_blank" rel="noopener" aria-label="Como chegar pelo Waze" title="Abrir no Waze">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.54 6.63A9.96 9.96 0 0 0 12 2C6.48 2 2 6.48 2 12c0 1.61.39 3.13 1.07 4.47-.34.67-.93 1.45-1.07 1.83-.27.69.31 1.7 1.39 1.7h1.79c.31 0 .62-.07.91-.21A9.95 9.95 0 0 0 12 22c4.83 0 8.92-3.43 9.84-8.04.59-.18 1.16-.55 1.16-1.46v-1c0-1.93-1.05-3.69-2.46-4.87zM8.5 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-3.5 4.5c-2.21 0-4-1.34-4-3h8c0 1.66-1.79 3-4 3z"/></svg>
+        </a>
+        <a class="header-route header-route--maps" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Jos%C3%A9+Gon%C3%A7alves+de+Oliveira%2C+279%2C+Canaan%2C+Sete+Lagoas+MG" target="_blank" rel="noopener" aria-label="Como chegar pelo Google Maps" title="Abrir no Google Maps">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 7 12 8 12s8-6.75 8-12c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+        </a>
+      </span>
+    </div>
 
     <!-- Telefones com hierarquia clara -->
     <div class="header-phones">
-      <a class="header-phone header-phone--primary" href="tel:+5531998786181">
+      <a class="header-phone header-phone--primary" href="tel:+553137712957">
         <span class="header-phone__icon" aria-hidden="true">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </span>
         <span class="header-phone__text">
-          <span class="header-phone__label">Plantão 24h</span>
-          <span class="header-phone__number">(31) 99878-6181</span>
-        </span>
-      </a>
-      <a class="header-phone header-phone--secondary" href="tel:+553137712957">
-        <span class="header-phone__text">
           <span class="header-phone__label">Recepção</span>
           <span class="header-phone__number">(31) 3771-2957</span>
+        </span>
+      </a>
+      <a class="header-phone header-phone--whatsapp" href="https://wa.me/5531998786181?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20veterin%C3%A1rio." target="_blank" rel="noopener">
+        <span class="header-phone__icon" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+        </span>
+        <span class="header-phone__text">
+          <span class="header-phone__label">Plantão</span>
+          <span class="header-phone__number">(31) 99878-6181</span>
         </span>
       </a>
     </div>
@@ -254,8 +265,15 @@
         </div>
       </div>
 
-      <div class="hero__media">
-        <img src="assets/images/hero.jpg?v=2" alt="Equipe da Proativa em atendimento na clínica" width="1200" height="900" fetchpriority="high" decoding="async">
+      <div class="hero__media hero__slider" id="heroSlider" aria-roledescription="carrossel" aria-label="Imagens da clínica">
+        <picture class="hero__slide is-active">
+          <source srcset="assets/images/hero.webp?v=1" type="image/webp">
+          <img src="assets/images/hero.jpg?v=2" alt="Equipe da Proativa em atendimento na clínica" width="1200" height="900" fetchpriority="high" decoding="async">
+        </picture>
+        <picture class="hero__slide">
+          <source srcset="assets/images/hero-fachada.webp?v=2" type="image/webp">
+          <img src="assets/images/hero-fachada.jpg?v=2" alt="Fachada da Proativa em Sete Lagoas" width="1400" height="890" loading="lazy" decoding="async">
+        </picture>
       </div>
     </div>
   </section>
@@ -305,8 +323,8 @@
             <div class="diff-card__icon" aria-hidden="true">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
             </div>
-            <h3>Diagnóstico no mesmo dia</h3>
-            <p>Consultas, vacinas, exames laboratoriais, raio X e ultrassom no próprio local. Você sai com o diagnóstico em mãos, sem precisar de outra clínica.</p>
+            <h3>Diagnóstico ágil</h3>
+            <p>Contamos com laboratório próprio para agilizar o diagnóstico do seu pet. Consultas, vacinas, exames laboratoriais, raio X e ultrassom em um só lugar.</p>
           </div>
         </article>
 
@@ -441,7 +459,8 @@
             <li>Raio-X</li>
             <li>Ultrassonografia</li>
             <li>Cirurgias</li>
-            <li>Atendimento oncológico</li>
+            <li>Internação</li>
+            <li>Banco de sangue felino e canino</li>
           </ul>
         </div>
         <div class="services__col">
@@ -458,7 +477,6 @@
             <li>Anestesia</li>
             <li>Cirurgia</li>
             <li>Diagnóstico por Imagem</li>
-            <li>Exames Laboratoriais</li>
           </ul>
         </div>
       </div>
@@ -473,11 +491,10 @@
         <h2 class="section__title">Quem cuida do seu pet</h2>
       </div>
 
-      <p class="team__intro">
-        Três veterinários sêniores coordenam a Proativa: <strong>Dra. Ana Ferretti</strong> (Anestesia e Intensivismo), <strong>Dr. Renato Valente</strong> (Clínica Médica e Oncologia) e <strong>Dr. Edson Martins</strong> (Clínica Médica e Cirurgia).
-        <br><br>
-        Eles formaram e treinam pessoalmente a equipe de plantonistas. Por isso, o cuidado que seu pet recebe às 3 da manhã é o mesmo que recebe às 3 da tarde.
-      </p>
+      <div class="team__intro">
+        <p>Três veterinários sêniores coordenam a Proativa: <strong>Dra. Ana Ferretti</strong> (Anestesia e Intensivismo), <strong>Dr. Renato Valente</strong> (Clínica Médica e Oncologia) e <strong>Dr. Edson Martins</strong> (Clínica Médica e Cirurgia).</p>
+        <p>Eles formaram e treinam pessoalmente a equipe de plantonistas. Por isso, o cuidado que seu pet recebe às 3 da manhã é o mesmo que recebe às 3 da tarde.</p>
+      </div>
 
       <div class="team-slider" data-team-slider>
         <button type="button" class="team-slider__nav team-slider__nav--prev" aria-label="Veterinário anterior" data-team-prev>
@@ -488,7 +505,10 @@
           <div class="team-slider__track" data-team-track>
             <article class="vet-card" aria-roledescription="slide" aria-label="1 de 5">
               <div class="vet-card__media">
-                <img src="assets/images/equipe/ana-ferretti.jpg?v=2" alt="Retrato da Dra. Ana Ferretti" width="1122" height="1402" loading="lazy" decoding="async">
+                <picture>
+                  <source srcset="assets/images/equipe/ana-ferretti.webp?v=3" type="image/webp">
+                  <img src="assets/images/equipe/ana-ferretti.jpg?v=3" alt="Retrato da Dra. Ana Ferretti" width="932" height="1402" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="vet-card__body">
                 <div class="vet-card__name">DRA. ANA FERRETTI</div>
@@ -498,7 +518,10 @@
             </article>
             <article class="vet-card" aria-roledescription="slide" aria-label="2 de 5">
               <div class="vet-card__media">
-                <img src="assets/images/equipe/renato-valente.jpg?v=2" alt="Retrato do Dr. Renato Valente" width="1122" height="1402" loading="lazy" decoding="async">
+                <picture>
+                  <source srcset="assets/images/equipe/renato-valente.webp?v=3" type="image/webp">
+                  <img src="assets/images/equipe/renato-valente.jpg?v=3" alt="Retrato do Dr. Renato Valente" width="1122" height="1402" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="vet-card__body">
                 <div class="vet-card__name">DR. RENATO VALENTE</div>
@@ -508,7 +531,10 @@
             </article>
             <article class="vet-card" aria-roledescription="slide" aria-label="3 de 5">
               <div class="vet-card__media">
-                <img src="assets/images/equipe/edson-martins.jpg?v=2" alt="Retrato do Dr. Edson Martins" width="1122" height="1402" loading="lazy" decoding="async">
+                <picture>
+                  <source srcset="assets/images/equipe/edson-martins.webp?v=3" type="image/webp">
+                  <img src="assets/images/equipe/edson-martins.jpg?v=3" alt="Retrato do Dr. Edson Martins" width="1122" height="1402" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="vet-card__body">
                 <div class="vet-card__name">DR. EDSON MARTINS</div>
@@ -518,17 +544,23 @@
             </article>
             <article class="vet-card" aria-roledescription="slide" aria-label="4 de 5">
               <div class="vet-card__media">
-                <img src="assets/images/equipe/paula.jpg?v=2" alt="Retrato da Dra. Paula" width="1122" height="1402" loading="lazy" decoding="async">
+                <picture>
+                  <source srcset="assets/images/equipe/paula.webp?v=3" type="image/webp">
+                  <img src="assets/images/equipe/paula.jpg?v=3" alt="Retrato da Dra. Paula Teixeira" width="1122" height="1402" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="vet-card__body">
-                <div class="vet-card__name">DRA. PAULA</div>
+                <div class="vet-card__name">DRA. PAULA TEIXEIRA</div>
                 <div class="vet-card__role">Médica Veterinária</div>
                 <div class="vet-card__crmv">CRMV-MG XXX</div>
               </div>
             </article>
             <article class="vet-card" aria-roledescription="slide" aria-label="5 de 5">
               <div class="vet-card__media">
-                <img src="assets/images/equipe/nayara.jpg?v=2" alt="Retrato da Dra. Nayara Araújo" width="1122" height="1402" loading="lazy" decoding="async">
+                <picture>
+                  <source srcset="assets/images/equipe/nayara.webp?v=3" type="image/webp">
+                  <img src="assets/images/equipe/nayara.jpg?v=3" alt="Retrato da Dra. Nayara Araújo" width="1122" height="1402" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="vet-card__body">
                 <div class="vet-card__name">DRA. NAYARA ARAÚJO</div>
@@ -554,7 +586,7 @@
       <div class="section__head">
         <span class="section__eyebrow">Localização</span>
         <h2 class="section__title">Como chegar até a Proativa</h2>
-        <p class="section__subtitle">Estamos em Canaan, Sete Lagoas — cerca de 5 minutos do centro, com estacionamento gratuito na porta.</p>
+        <p class="section__subtitle">Estamos ao lado da Pracinha do Canaan, a 5 minutos do centro da cidade.</p>
       </div>
 
       <!-- MAPA dominante -->
@@ -577,23 +609,29 @@
           <div class="location__address-text">
             <p class="location__address-line">Rua José Gonçalves de Oliveira, 279</p>
             <p class="location__address-meta">Canaan · Sete Lagoas/MG · CEP 35700-297</p>
-            <p class="location__address-extra">Estacionamento gratuito · Acesso fácil pela Av. Prefeito Alberto Moura</p>
           </div>
         </div>
 
         <div class="location__action">
-          <a class="btn btn-brand location__route-btn"
+          <a class="location__route location__route--maps"
              href="https://www.google.com/maps/dir/?api=1&destination=Rua+Jos%C3%A9+Gon%C3%A7alves+de+Oliveira%2C+279%2C+Canaan%2C+Sete+Lagoas+MG"
              target="_blank" rel="noopener"
-             data-track="rota-google-maps">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Abrir rota no Google Maps
+             data-track="rota-google-maps"
+             aria-label="Abrir rota no Google Maps">
+            <span class="location__route-logo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 7 12 8 12s8-6.75 8-12c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+            </span>
+            <span class="location__route-text">Abrir no Maps</span>
           </a>
-          <a class="location__route-alt"
-             href="https://waze.com/ul?q=Rua%20Jos%C3%A9%20Gon%C3%A7alves%20de%20Oliveira%2C%20279%2C%20Sete%20Lagoas"
+          <a class="location__route location__route--waze"
+             href="https://waze.com/ul?ll=-19.4659,-44.2476&navigate=yes"
              target="_blank" rel="noopener"
-             data-track="rota-waze">
-            ou abrir no Waze →
+             data-track="rota-waze"
+             aria-label="Abrir rota no Waze">
+            <span class="location__route-logo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.54 6.63A9.96 9.96 0 0 0 12 2C6.48 2 2 6.48 2 12c0 1.61.39 3.13 1.07 4.47-.34.67-.93 1.45-1.07 1.83-.27.69.31 1.7 1.39 1.7h1.79c.31 0 .62-.07.91-.21A9.95 9.95 0 0 0 12 22c4.83 0 8.92-3.43 9.84-8.04.59-.18 1.16-.55 1.16-1.46v-1c0-1.93-1.05-3.69-2.46-4.87zM8.5 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-3.5 4.5c-2.21 0-4-1.34-4-3h8c0 1.66-1.79 3-4 3z"/></svg>
+            </span>
+            <span class="location__route-text">Abrir no Waze</span>
           </a>
         </div>
 
@@ -608,25 +646,9 @@
         <span class="final-cta__dot" aria-hidden="true"></span>
         Plantão ativo · <span id="liveTime">agora</span> em Sete Lagoas
       </div>
-      <h2 class="final-cta__title">Seu pet não pode esperar.<br>A gente também não.</h2>
-      <p class="final-cta__subtitle">Ligue antes de sair de casa. Quando você chegar, a equipe já estará pronta para receber seu pet.</p>
+      <h2 class="final-cta__title">Seu pet não pode esperar.<br>Quando se trata de emergências, cada segundo conta.</h2>
 
-      <div class="final-cta__expectation" aria-label="O que esperar ao ligar">
-        <div class="final-cta__step">
-          <span class="final-cta__step-num">1</span>
-          <span class="final-cta__step-text"><strong>Liga agora</strong><small>Atendido em segundos</small></span>
-        </div>
-        <span class="final-cta__step-arrow" aria-hidden="true">→</span>
-        <div class="final-cta__step">
-          <span class="final-cta__step-num">2</span>
-          <span class="final-cta__step-text"><strong>Equipe se prepara</strong><small>Enquanto você vem</small></span>
-        </div>
-        <span class="final-cta__step-arrow" aria-hidden="true">→</span>
-        <div class="final-cta__step">
-          <span class="final-cta__step-num">3</span>
-          <span class="final-cta__step-text"><strong>Atendimento na chegada</strong><small>Sem fila de espera</small></span>
-        </div>
-      </div>
+      <p class="final-cta__notice">Notifique a clínica sobre sua chegada e receba orientações de nossa equipe enquanto se dirige à clínica.</p>
 
       <div class="final-cta__ctas">
         <a class="btn btn-emergency btn-emergency--pulse" href="tel:+5531998786181">
@@ -637,31 +659,6 @@
           <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
           Falar no WhatsApp
         </a>
-      </div>
-
-      <div class="final-cta__info">
-        <div>
-          <strong>Endereço</strong>
-          R. José Gonçalves de Oliveira, 279<br>Canaan, Sete Lagoas/MG
-        </div>
-        <div>
-          <strong>Telefones</strong>
-          (31) 99878-6181<br>(31) 3771-2957
-        </div>
-        <div>
-          <strong>Redes sociais</strong>
-          <div class="final-cta__social">
-            <a href="https://instagram.com/proativaclinica" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a href="https://facebook.com/proativaveterinaria" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07C2 17.1 5.66 21.26 10.44 22v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33V22C18.34 21.26 22 17.1 22 12.07z"/></svg>
-            </a>
-            <a href="https://tiktok.com/@proativaclinica" target="_blank" rel="noopener" aria-label="TikTok">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.81a8.16 8.16 0 0 0 4.77 1.52V6.89a4.85 4.85 0 0 1-1.84-.2z"/></svg>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -681,7 +678,7 @@
               <source srcset="assets/images/proativa-symbol.webp" type="image/webp">
               <img src="assets/images/proativa-symbol.png" alt="" class="footer-brand__symbol" width="160" height="151" loading="lazy">
             </picture>
-            <span class="footer-brand__24">24h</span>
+            <img src="assets/images/badge-24h.webp?v=2" alt="" class="footer-brand__24" width="26" height="26" loading="lazy" aria-hidden="true">
           </span>
           <div class="footer-brand__text">
             <strong>PROATIVA</strong>
@@ -766,7 +763,16 @@
         As informações deste site têm caráter exclusivamente informativo e <strong>não substituem consulta veterinária presencial</strong>. Em caso de emergência, ligue imediatamente para o plantão.
       </p>
       <p class="footer-copyright">
-        © <span id="footerYear">2026</span> Proativa Clínica Veterinária — Todos os direitos reservados.
+        Proativa Clínica Veterinária © <span id="footerYear">2026</span>
+      </p>
+      <p class="footer-legal-line">
+        RT: Dr. Edson José Martins – Médico Veterinário | CRMV-MG 17796
+      </p>
+      <p class="footer-legal-line">
+        Em conformidade com as Resoluções do CFMV e o Código de Ética Profissional.
+      </p>
+      <p class="footer-legal-line">
+        Saiba mais em nossa <a href="privacidade.html">Política de Privacidade</a>.
       </p>
     </div>
 
@@ -872,20 +878,31 @@ const PAPER_MODE = new URLSearchParams(location.search).has('paper')
   || document.documentElement.classList.contains('paper-mode');
 if (PAPER_MODE) document.documentElement.classList.add('paper-mode');
 
+// === Hero slider — alterna automaticamente entre as imagens ===
+(() => {
+  const slider = document.getElementById('heroSlider');
+  if (!slider || PAPER_MODE) return;
+  const slides = slider.querySelectorAll('.hero__slide');
+  if (slides.length < 2) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove('is-active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('is-active');
+  }, 5000);
+})();
+
 // === Reviews + horário ao vivo ===
+// Avaliações reais do Google — todas 5 estrelas
 const REVIEWS = [
-  { name: "Mariana S.", initial: "M", time: "há 2 semanas", text: "Cheguei desesperada de madrugada com minha gata convulsionando. Em 3 minutos a equipe já estava com ela na sala de emergência. Atendimento humano e técnico ao mesmo tempo. Salvaram a vida da Mel." },
-  { name: "Carlos A.", initial: "C", time: "há 1 mês", text: "Meu cachorro foi atropelado num feriado, liguei e me orientaram pra ir direto. Quando chegamos já tinham tudo preparado. Hoje o Thor está em casa, recuperado. Sem palavras pra Dra. Ana e equipe." },
-  { name: "Patrícia L.", initial: "P", time: "há 3 semanas", text: "Atendimento de excelência. Levei minha pet com suspeita de tumor e em um único dia fiz consulta, exames e ultrassom. Saí da clínica com diagnóstico fechado. Dr. Renato é referência em oncologia veterinária na região." },
-  { name: "Rafael M.", initial: "R", time: "há 1 semana", text: "Plantão 24h de verdade — liguei 2h da manhã e tinha gente atendendo. Estrutura impecável, leitos de internação amplos, equipe atenciosa com tutor. Recomendo demais." },
-  { name: "Juliana B.", initial: "J", time: "há 2 meses", text: "Meu gato precisou ficar internado uma semana. Recebi atualizações diárias por WhatsApp, podia visitar quando quisesse. Pra mim foi o que fez diferença, saber que ele estava sendo bem cuidado." },
-  { name: "Eduardo P.", initial: "E", time: "há 3 meses", text: "Profissionalismo do começo ao fim. Cirurgia ortopédica do meu Labrador foi um sucesso. Dr. Edson explicou cada passo, anestesia conduzida pela Dra. Ana. Equipe que se vê que é alinhada." },
-  { name: "Camila T.", initial: "C", time: "há 4 dias", text: "Já é a terceira vez que volto na Proativa em situações diferentes — vacina, emergência e exames. Sempre um padrão de qualidade altíssimo. Hoje só confio em vocês com meus animais." },
-  { name: "Felipe N.", initial: "F", time: "há 1 mês", text: "Cheguei com a Bella muito mal e fui orientado pelo WhatsApp antes mesmo de sair de casa. Quando chegamos a equipe já estava montada esperando. Esse cuidado faz toda diferença." },
-  { name: "Renata S.", initial: "R", time: "há 5 dias", text: "Atendimento de emergência num domingo de madrugada. Equipe receptiva, médico veterinário super competente. Preço justo pela estrutura que oferecem. Voltarei sempre." },
-  { name: "Marcos V.", initial: "M", time: "há 2 meses", text: "Levei meu cão idoso com problema cardíaco. Cardiologista veterinário, exames no local, tratamento iniciado no mesmo dia. Estrutura completa, não precisei correr atrás de outras clínicas." },
-  { name: "Aline F.", initial: "A", time: "há 3 semanas", text: "Recomendo de olhos fechados. Atendimento rápido, ambiente limpo e organizado, equipe que ama o que faz. Minha cachorrinha foi tratada com todo carinho e profissionalismo." },
-  { name: "Bruno C.", initial: "B", time: "há 1 semana", text: "Único lugar de Sete Lagoas que confia 100%. Plantão de verdade, sem enrolação, sem ‘liga amanhã’. Quando seu pet precisa, eles estão lá. Simples assim." },
+  { name: "Bruna Vasconcellos", initial: "B", time: "há 3 meses", text: "Quero deixar meu sincero agradecimento a toda a equipe da clínica veterinária pelo profissionalismo, dedicação e carinho com que estão cuidando do meu gatinho. É visível o amor pelos animais e o cuidado em cada detalhe do tratamento. Gratidão por todo o suporte e atenção! 🐾✨" },
+  { name: "Telma Fátima", initial: "T", time: "há 1 ano", text: "Melhor impossível!!!! A melhor equipe da cidade. Os únicos que meus filhos de patas amam e aceitam. Confio de olhos fechados!! Dra Ana que lute, porque Lyon só aceita ela e Dr Edson, kkkkkkkkk. Nota mil milhões!" },
+  { name: "Erica Rocha", initial: "E", time: "há 1 ano", text: "Profissionais super atenciosos e dedicados, sempre busca de mais conhecimentos para cuidar dos nossos pets." },
+  { name: "Elisangela Soares", initial: "E", time: "há 1 ano", text: "Excelentes profissionais e atendimento maravilhoso. Tratam os pets com tanto carinho. Sempre indico p familiares e amigos e todos saem mto satisfeitos." },
+  { name: "Amanda Santiago", initial: "A", time: "há 1 ano", text: "Simplesmente os melhores. É nítido o amor pelos bichinhos e pela profissão. Não confio em outras pessoas pra cuidar dos meu doguinhos. Se a Marry (minha yorkshire temperamental) gostou deles é porque o lugar é incrível. Obrigado por todo cuidado e carinho ☺️" },
+  { name: "Fabiola Ribeiro", initial: "F", time: "há 1 ano", text: "Excelentes profissionais, cuidam dos nossos pets com maior carinho e cuidado. Sou muito grata pelo trabalho maravilhoso que vcs nos proporciona. Muito obrigada sempre! Super indico galera, pode confiar sem medo. Bjos equipe Proativa." },
+  { name: "Tayná Barros", initial: "T", time: "há 1 ano", text: "Além de fazer excelente castração nos nossos cachorros e gatos, tratou outras doenças deles com muito carinho e amor. Sempre prestativo, muita atenção, cuidado. Cuidou até o último dia do nosso golden e deram todo carinho amor." },
 ];
 
 const track = document.getElementById('reviewsTrack');
@@ -1015,19 +1032,41 @@ document.getElementById('footerYear').textContent = new Date().getFullYear();
       dot.setAttribute('role', 'tab');
       dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
       dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
-      dot.addEventListener('click', () => goTo(i));
+      dot.addEventListener('click', () => { goTo(i); stopAutoplay(); });
       dotsWrap.appendChild(dot);
     }
   }
 
-  if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
+  // === Autoplay (pausa em hover, foco, interação manual e reduced-motion) ===
+  const AUTOPLAY_MS = 5000;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let autoplayTimer = null;
+  function startAutoplay() {
+    if (PAPER_MODE || reducedMotion) return;
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goTo(index + 1), AUTOPLAY_MS);
+  }
+  function stopAutoplay() {
+    if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+  }
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+  slider.addEventListener('focusin', stopAutoplay);
+  slider.addEventListener('focusout', startAutoplay);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAutoplay(); else startAutoplay();
+  });
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { goTo(index - 1); stopAutoplay(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goTo(index + 1); stopAutoplay(); });
 
   viewport.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(index - 1); }
-    else if (e.key === 'ArrowRight') { e.preventDefault(); goTo(index + 1); }
-    else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
-    else if (e.key === 'End') { e.preventDefault(); goTo(maxIndex()); }
+    let acted = false;
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(index - 1); acted = true; }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); goTo(index + 1); acted = true; }
+    else if (e.key === 'Home') { e.preventDefault(); goTo(0); acted = true; }
+    else if (e.key === 'End') { e.preventDefault(); goTo(maxIndex()); acted = true; }
+    if (acted) stopAutoplay();
   });
 
   // Swipe (touch) — only meaningful on mobile/tablet where nav is hidden
@@ -1036,6 +1075,7 @@ document.getElementById('footerYear').textContent = new Date().getFullYear();
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     dragging = true;
+    stopAutoplay();
   }, { passive: true });
   viewport.addEventListener('touchend', (e) => {
     if (!dragging) return;
@@ -1061,6 +1101,7 @@ document.getElementById('footerYear').textContent = new Date().getFullYear();
 
   buildDots();
   update();
+  startAutoplay();
 })();
 </script>
 <script src="js/consent.js?v=2" defer></script>
